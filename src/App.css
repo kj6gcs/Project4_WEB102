@@ -423,3 +423,12 @@ h1 {
     height: 260px;
   }
 }
+
+.clickable-history-image {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.clickable-history-image:hover {
+  transform: scale(1.02);
+}

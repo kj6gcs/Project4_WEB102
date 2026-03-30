@@ -9,7 +9,7 @@ function App() {
   const [error, setError] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-const API_KEY = import.meta.env.VITE_CAT_API_KEY;
+  const API_KEY = import.meta.env.VITE_CAT_API_KEY;
 
   const fetchCat = async () => {
     setLoading(true);
@@ -94,6 +94,24 @@ const API_KEY = import.meta.env.VITE_CAT_API_KEY;
         setCurrentCat(null);
       }
     }
+  };
+
+  const handleHistoryClick = (cat) => {
+    if (!cat) return;
+
+    const isBanned =
+      banList.includes(cat.breed) ||
+      banList.includes(cat.origin) ||
+      banList.includes(cat.lifeSpan);
+
+    if (isBanned) {
+      setError("That cat can't be reloaded because one of its attributes is banned.");
+      return;
+    }
+
+    setError("");
+    setCurrentCat(cat);
+    setIsModalOpen(false);
   };
 
   useEffect(() => {
@@ -206,7 +224,8 @@ const API_KEY = import.meta.env.VITE_CAT_API_KEY;
                   <img
                     src={cat.image}
                     alt={cat.breed}
-                    className="history-image"
+                    className="history-image clickable-history-image"
+                    onClick={() => handleHistoryClick(cat)}
                   />
                   <p>
                     <strong>{cat.breed}</strong>

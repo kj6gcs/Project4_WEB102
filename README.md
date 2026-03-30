@@ -1,10 +1,10 @@
-# Web Development Project 4 - *Name of App Here*
+# Web Development Project 4 - *CATegories*
 
 Submitted by: **Robby Wideman**
 
 This web app: **insert description**
 
-Time spent: **4** hours spent in total
+Time spent: **6** hours spent in total
 
 ## Required Features
 
@@ -38,7 +38,11 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [ X ] List anything else that you added to improve the site's functionality!
+  - [ X ] Main photo is now clickable - brings up a modal of the photo to enlarge it.
+  - [ X ] To exit the modal, users can either tap ESC, click outside of it, or click the "X" button in the top right corner.
+  - [ X ] Photo history now scrolls without an unsightly scroll bar.
+  - [ X ] Photo history is clickable to return as the main photo/cat details, so long as the cat does not have any of the banned attributes.
 
 ## Video Walkthrough
 
@@ -55,7 +59,7 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Mainly for this project, it was getting the API setup properly, and remembering for security purposes (at the last seconde) to move the API key itself to a .env, using an alias in it's place in the actual code, and making sure the right items were listed in the .gitignore.
 
 ## License
 
