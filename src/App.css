@@ -5,9 +5,10 @@
 }
 
 body {
-  background: linear-gradient(135deg, #f7f1e3, #dfe6e9);
+  background: linear-gradient(to bottom, #1e293b 0%, #e7e5e4 100%);
+  background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
-  color: #2d3436;
+  color: #fbbf24;
 }
 
 #root {
@@ -22,27 +23,31 @@ body {
 
 h1 {
   margin-bottom: 0.5rem;
-  color: #2d3436;
+  color: #fbbf24;
 }
 
 .subtitle {
   margin-bottom: 1.5rem;
-  color: #555;
+  color: #fbbf24;
 }
 
 .discover-btn {
-  background-color: #6c5ce7;
-  color: white;
+  background-color: #fbbf24;
+  color: #1e293b;
   border: none;
   padding: 0.9rem 1.4rem;
   border-radius: 10px;
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
   margin-bottom: 1.5rem;
+  box-shadow:
+    rgba(0, 0, 0, 0.12) 0 6px 12px -3px,
+    rgba(0, 0, 0, 0.06) 0 2px 6px -2px;
 }
 
 .discover-btn:hover {
-  background-color: #5a4bd1;
+  background-color: #f59e0b;
 }
 
 .discover-btn:disabled {
@@ -60,20 +65,23 @@ h1 {
 .left-panel,
 .center-panel,
 .right-panel {
-  background: rgba(255, 255, 255, 0.85);
+  background: #1e293b;
+  border: 1px solid #334155;
   border-radius: 16px;
   padding: 1rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    rgba(0, 0, 0, 0.18) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.08) 0 4px 6px -2px;
 }
 
 .small-text {
   font-size: 0.9rem;
-  color: #666;
+  color: #fbbf24;
   margin: 0.5rem 0 1rem;
 }
 
 .empty-message {
-  color: #777;
+  color: #fbbf24;
   font-style: italic;
 }
 
@@ -97,7 +105,7 @@ h1 {
   height: 320px;
   object-fit: cover;
   border-radius: 16px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
 .attribute-row {
@@ -108,8 +116,9 @@ h1 {
 }
 
 .attribute {
-  background-color: #ffeaa7;
-  border: none;
+  background-color: #334155;
+  color: #fbbf24;
+  border: 1px solid #475569;
   border-radius: 999px;
   padding: 0.7rem 1rem;
   cursor: pointer;
@@ -117,7 +126,7 @@ h1 {
 }
 
 .attribute:hover {
-  background-color: #fdcb6e;
+  background-color: #475569;
 }
 
 .ban-list {
@@ -128,203 +137,24 @@ h1 {
 }
 
 .ban-item {
-  background-color: #fab1a0;
-  border: none;
+  background-color: #78350f;
+  color: #fbbf24;
+  border: 1px solid #f59e0b;
   border-radius: 999px;
   padding: 0.6rem 0.9rem;
   cursor: pointer;
 }
 
 .ban-item:hover {
-  background-color: #e17055;
-  color: white;
+  background-color: #92400e;
+  color: #fde68a;
 }
 
 .history-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-height: 520px;
-  overflow-y: auto;
-}
-
-.history-card {
-  background: #f8f9fa;
-  border-radius: 12px;
-  padding: 0.75rem;
-}
-
-.history-image {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 0.5rem;
-}
-
-.error {
-  color: #d63031;
-  margin-bottom: 1rem;
-  font-weight: bold;
-}
-
-@media (max-width: 900px) {
-  .main-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .cat-image {
-    height: 260px;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: linear-gradient(135deg, #f7f1e3, #dfe6e9);
-  font-family: Arial, Helvetica, sans-serif;
-  color: #2d3436;
-}
-
-#root {
-  width: 100%;
-}
-
-.app {
-  min-height: 100vh;
-  padding: 2rem;
-  text-align: center;
-}
-
-h1 {
-  margin-bottom: 0.5rem;
-  color: #2d3436;
-}
-
-.subtitle {
-  margin-bottom: 1.5rem;
-  color: #555;
-}
-
-.discover-btn {
-  background-color: #6c5ce7;
-  color: white;
-  border: none;
-  padding: 0.9rem 1.4rem;
-  border-radius: 10px;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-bottom: 1.5rem;
-}
-
-.discover-btn:hover {
-  background-color: #5a4bd1;
-}
-
-.discover-btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-
-.main-layout {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 1.5rem;
-  align-items: start;
-}
-
-.left-panel,
-.center-panel,
-.right-panel {
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 16px;
-  padding: 1rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-.small-text {
-  font-size: 0.9rem;
-  color: #666;
-  margin: 0.5rem 0 1rem;
-}
-
-.empty-message {
-  color: #777;
-  font-style: italic;
-}
-
-.cat-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.empty-card {
-  min-height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cat-image {
-  width: 100%;
-  max-width: 420px;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-}
-
-.attribute-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: center;
-}
-
-.attribute {
-  background-color: #ffeaa7;
-  border: none;
-  border-radius: 999px;
-  padding: 0.7rem 1rem;
-  cursor: pointer;
-  font-size: 0.95rem;
-}
-
-.attribute:hover {
-  background-color: #fdcb6e;
-}
-
-.ban-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  justify-content: center;
-}
-
-.ban-item {
-  background-color: #fab1a0;
-  border: none;
-  border-radius: 999px;
-  padding: 0.6rem 0.9rem;
-  cursor: pointer;
-}
-
-.ban-item:hover {
-  background-color: #e17055;
-  color: white;
-}
-
-.history-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-height: 520px;
+  max-height: 600px;
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -335,7 +165,8 @@ h1 {
 }
 
 .history-card {
-  background: #f8f9fa;
+  background: #334155;
+  border: 1px solid #475569;
   border-radius: 12px;
   padding: 0.75rem;
 }
@@ -349,7 +180,7 @@ h1 {
 }
 
 .error {
-  color: #d63031;
+  color: #b91c1c;
   margin-bottom: 1rem;
   font-weight: bold;
 }
@@ -363,13 +194,22 @@ h1 {
   transform: scale(1.02);
 }
 
+.clickable-history-image {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.clickable-history-image:hover {
+  transform: scale(1.02);
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.78);
+  background: rgba(15, 23, 42, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -401,8 +241,8 @@ h1 {
   height: 38px;
   border: none;
   border-radius: 50%;
-  background: white;
-  color: black;
+  background: #fbbf24;
+  color: #1e293b;
   font-size: 1.6rem;
   font-weight: bold;
   cursor: pointer;
@@ -411,7 +251,7 @@ h1 {
 }
 
 .modal-close:hover {
-  background: #f1f1f1;
+  background: #f59e0b;
 }
 
 @media (max-width: 900px) {
@@ -422,13 +262,4 @@ h1 {
   .cat-image {
     height: 260px;
   }
-}
-
-.clickable-history-image {
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.clickable-history-image:hover {
-  transform: scale(1.02);
 }

@@ -23,6 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
+# Extras
 .env
 node_modules
 dist
+*.mp4

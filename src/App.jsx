@@ -29,7 +29,7 @@ function App() {
             headers: {
               "x-api-key": API_KEY,
             },
-          }
+          },
         );
 
         if (!response.ok) {
@@ -105,7 +105,9 @@ function App() {
       banList.includes(cat.lifeSpan);
 
     if (isBanned) {
-      setError("That cat can't be reloaded because one of its attributes is banned.");
+      setError(
+        "That cat can't be reloaded because one of its attributes is banned.",
+      );
       return;
     }
 
@@ -136,10 +138,8 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Veni Vici: Cat Explorer</h1>
-      <p className="subtitle">
-        Discover random cats and click attributes to ban them.
-      </p>
+      <h1 className>CATegories</h1>
+      <p className="subtitle">StumbleUpon, but for cats!</p>
 
       <button className="discover-btn" onClick={fetchCat} disabled={loading}>
         {loading ? "Discovering..." : "Discover Cat"}
